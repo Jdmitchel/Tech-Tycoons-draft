@@ -1,0 +1,36 @@
+section .container .box .image img{
+    max-width: 100%;
+    transition: transform 4s;
+}
+
+
+section .container .box .image:hover img{
+    transform: scale(1.2);
+}
+
+
+section .container .box:hover .details{
+    transform: scaleY(1);
+}
+
+
+.container .box .details{
+    position: absolute;
+    margin: 10px;
+    background: #bb449d;
+    transform: scaleY(0);
+    transition: transform 0.5s;
+		top: 0;
+}
+
+.container .box .details .context{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 10px;
+       color: #000000;
+}
+
+
+
