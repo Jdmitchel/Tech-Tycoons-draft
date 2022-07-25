@@ -140,38 +140,7 @@ async function showHeroes(){
 
 showHeroes();
 
-async function showAllHeroes(){
-    try{
-    let data = await Lib.getData("https://akabab.github.io/superhero-api/api/all.json");
-    data = data.heroes;
-			Lib.renderCollection(data, aside, '.display_names')
-    Lib.renderCollection(data, card,  '#Character');
-    }
-catch(err){
-    console.log(err);
-
-    }
-   
-}
-
-showAllHeroes();
 
 
-
-
-
-function nameCompare(a,b){
-    return a.name.localeCompare(b.name);
-}
-function ascending(){
-    let sorted = hero.sort(nameCompare);
-    Lib.renderCollection(sorted, card, '#display_names');
-}
-
-function search(){
-    let search = document.querySelector('#search').value;
-    let result = hero.filter(item => item.name.includes(search));
-    Lib.renderCollection(result, card, '.display_names');
-}
 
 
